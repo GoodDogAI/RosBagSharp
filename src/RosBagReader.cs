@@ -10,11 +10,11 @@
             this.source = source ?? throw new System.ArgumentNullException(nameof(source));
         }
 
-        public async Task<bool> ReadAsync() {
+        public async ValueTask<bool> ReadAsync() {
             throw new NotImplementedException();
         }
 
-        public async Task SkipAsync() {
+        public async ValueTask SkipAsync() {
             throw new NotImplementedException();
         }
 
