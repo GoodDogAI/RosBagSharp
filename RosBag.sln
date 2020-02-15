@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repo", "Repo", "{1456FF91-0
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.RosBag", "tests\Tests.RosBag.csproj", "{F5C14B7B-18F2-4088-A5BF-ACBC36AC281B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{EB002455-6503-4A25-B2A1-3526AD5AACF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB002455-6503-4A25-B2A1-3526AD5AACF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB002455-6503-4A25-B2A1-3526AD5AACF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C14B7B-18F2-4088-A5BF-ACBC36AC281B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C14B7B-18F2-4088-A5BF-ACBC36AC281B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C14B7B-18F2-4088-A5BF-ACBC36AC281B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C14B7B-18F2-4088-A5BF-ACBC36AC281B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
