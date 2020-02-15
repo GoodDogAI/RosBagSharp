@@ -54,8 +54,14 @@
             throw new RosBagException();
         }
 
-        void Dispose() => this.binary.Dispose();
-        void IDisposable.Dispose() => this.Dispose();
+        protected virtual void Dispose(bool disposing) {
+            if (disposing)
+                this.binary.Dispose();
+        }
+        public void Dispose() {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
         public void Close() => this.Dispose();
 
         public RosBagReader(Stream source) {

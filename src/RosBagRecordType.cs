@@ -1,10 +1,10 @@
 ﻿namespace ROS {
     public enum RosBagRecordType {
-        BagHeader = 0x03,
-        Chunk = 0x05,
-        Connection = 0x07,
         Message = 0x02,
+        BagHeader = 0x03,
         Index = 0x04,
+        Chunk = 0x05,
         ChunkInfo = 0x06,
+        Connection = 0x07,
     }
 }
