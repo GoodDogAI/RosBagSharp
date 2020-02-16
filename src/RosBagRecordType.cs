@@ -1,5 +1,6 @@
 ﻿namespace ROS {
     public enum RosBagRecordType {
+        Unknown = 0x00,
         Message = 0x02,
         BagHeader = 0x03,
         Index = 0x04,
