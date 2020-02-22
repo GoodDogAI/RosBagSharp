@@ -1,12 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <RootNamespace>ROS</RootNamespace>
+
     <PackageId>ROS.Bag</PackageId>
     <VersionPrefix>0.0.1</VersionPrefix>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
     <Authors>Victor Milovanov</Authors>
     <Product>ROS</Product>
     <Description>Library for reading RosBag format.</Description>
