@@ -19,4 +19,4 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release
     - name: Pack
-      run: dotnet pack --configuration Release --version-suffix master-$(date +%Y%m%d%H%M%S)
+      run: dotnet pack --configuration Release --version-suffix master-$(date +%Y-%m-%d-%H%M%S)
