@@ -5,6 +5,17 @@
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <RootNamespace>ROS</RootNamespace>
+    <PackageId>ROS.Bag</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Victor Milovanov</Authors>
+    <Product>ROS</Product>
+    <Description>Library for reading RosBag format.</Description>
+    <Copyright />
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/ArmyOfRobots/RosBagSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ArmyOfRobots/RosBagSharp.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ROS robot rosbag</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +25,13 @@
     </PackageReference>
     <PackageReference Include="System.Memory" Version="4.5.3" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
