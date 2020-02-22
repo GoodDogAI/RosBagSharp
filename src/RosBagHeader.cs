@@ -1,4 +1,6 @@
 ﻿namespace ROS {
+    using System;
+
     /// <summary>
     /// The bag header record occurs once in the file as the first record.
     /// </summary>
@@ -7,14 +9,32 @@
         /// <summary>
         /// Offset of first record after the chunk section
         /// </summary>
-        public long FirstRecordOffset { get; }
+        public ulong FirstRecordOffset { get; }
         /// <summary>
         /// Number of unique connections in the file
         /// </summary>
-        public int ConnectionCount { get; }
+        public uint ConnectionCount { get; }
         /// <summary>
         /// Number of chunk records in the file
         /// </summary>
-        public int ChunkCount { get; }
+        public uint ChunkCount { get; }
+
+        public RosBagHeader(ulong firstRecordOffset, uint connectionCount, uint chunkCount) {
+            this.FirstRecordOffset = firstRecordOffset;
+            this.ConnectionCount = connectionCount;
+            this.ChunkCount = chunkCount;
+        }
+
+        [Flags]
+        internal enum Fields: byte
+        {
+            None = 0,
+
+            FirstRecordOffset = 0b0001,
+            ConnectionCount = 0b0010,
+            ChunkCount = 0b0100,
+
+            All = FirstRecordOffset | ConnectionCount | ChunkCount,
+        }
     }
 }
