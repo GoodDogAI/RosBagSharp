@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>ROS</RootNamespace>
     <PackageId>ROS.Bag</PackageId>
-    <Version>0.0.1</Version>
+    <VersionPrefix>0.0.1</VersionPrefix>
     <Authors>Victor Milovanov</Authors>
     <Product>ROS</Product>
     <Description>Library for reading RosBag format.</Description>

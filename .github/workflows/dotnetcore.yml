@@ -15,3 +15,5 @@ jobs:
         dotnet-version: 3.1.101
     - name: Build
       run: dotnet build --configuration Release
+    - name: Pack
+      run: dotnet pack --configuration Release --version-suffix master-$(date +%Y%m%d%H%M%S)
