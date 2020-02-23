@@ -106,8 +106,7 @@
             this.PopSize();
             if (await this.ReadRecordHeaderFieldName(cancellation).ConfigureAwait(false))
                 return true;
-            this.PopSize();
-            return await this.ReadRecordData(cancellation).ConfigureAwait(false);
+            return await this.ReadRecordDataHeader(cancellation).ConfigureAwait(false);
         }
 
         void PopSize() {
