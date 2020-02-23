@@ -153,6 +153,7 @@
                 this.CurrentRecordType = (RosBagRecordType)result[0];
             }
             this.NodeType = RosBagNodeType.HeaderFieldValue;
+            this.RemainingEntryBytes = 0;
             return true;
         }
 
