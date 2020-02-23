@@ -10,7 +10,7 @@
 
             if (!await reader.ReadRecord(cancellation).ConfigureAwait(false))
                 throw new RosBagException(RosBagReader.EndOfStream);
-            if (reader.NodeType != RosBagNodeType.Record)
+            if (reader.NodeType != RosBagNodeType.RecordHeader)
                 throw new RosBagException(HeaderMissing);
 
             ulong firstRecordOffset = 0;
@@ -40,6 +40,7 @@
                     if (fields.HasFlag(RosBagHeader.Fields.ChunkCount))
                         throw new RosBagException(RosBagReader.DuplicateField);
                     chunkCount = await reader.ReadUInt32(cancellation).ConfigureAwait(false);
+                    fields |= RosBagHeader.Fields.ChunkCount;
                     break;
                 case "op":
                     if (!await reader.ReadAsync(cancellation).ConfigureAwait(false))
