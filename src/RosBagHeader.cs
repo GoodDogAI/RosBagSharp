@@ -19,6 +19,9 @@
         /// </summary>
         public uint ChunkCount { get; }
 
+        /// <summary>Returns human-readable representation of this object</summary>
+        public override string ToString() => $"connections: {this.ConnectionCount} chunks: {this.ChunkCount} offset: {this.FirstRecordOffset}";
+
         public RosBagHeader(ulong firstRecordOffset, uint connectionCount, uint chunkCount) {
             this.FirstRecordOffset = firstRecordOffset;
             this.ConnectionCount = connectionCount;
