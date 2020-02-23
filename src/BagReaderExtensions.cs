@@ -47,6 +47,7 @@
                         throw new RosBagException(RosBagReader.EndOfStream);
                     if (reader.CurrentRecordType != RosBagRecordType.BagHeader)
                         throw new RosBagException(HeaderMissing);
+                    fields |= RosBagHeader.Fields.Op;
                     break;
                 default:
                     Debug.WriteLine($"unknown bag header field: {reader.Text}");
@@ -55,6 +56,8 @@
                     break;
                 }
             }
+
+            Debug.WriteLine("Extra headers in bag header. Size: " + reader.RemainingEntryBytes);
 
             // skip remaining fields
             await reader.Skip(cancellation).ConfigureAwait(false);

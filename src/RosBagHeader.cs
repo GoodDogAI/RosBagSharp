@@ -37,7 +37,9 @@
             ConnectionCount = 0b0010,
             ChunkCount = 0b0100,
 
-            All = FirstRecordOffset | ConnectionCount | ChunkCount,
+            Op = 0b1000,
+
+            All = FirstRecordOffset | ConnectionCount | ChunkCount | Op,
         }
     }
 }
