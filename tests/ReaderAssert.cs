@@ -11,10 +11,11 @@
             if (expectedBytes != null)
                 Assert.AreEqual(expectedBytes, reader.RemainingEntryBytes);
         }
-        public static async Task HeaderFieldName(RosBagReader reader, string expectedName) {
+        public static async Task HeaderFieldName(RosBagReader reader, string expectedName = null) {
             await reader.ReadAsync().ConfigureAwait(false);
             Assert.AreEqual(RosBagNodeType.HeaderFieldName, reader.NodeType);
-            Assert.AreEqual(expectedName, reader.Text);
+            if (expectedName != null)
+                Assert.AreEqual(expectedName, reader.Text);
         }
 
         public static async Task HeaderFieldValue(RosBagReader reader) {
